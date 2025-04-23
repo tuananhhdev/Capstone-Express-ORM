@@ -3,20 +3,6 @@ import { responseSuccess } from "../common/helpers/response.helper";
 import { userService } from "../services/user.service";
 
 export const userController = {
-  // create: async function (req: Request, res: Response, next: NextFunction) {
-  //   try {
-  //     const result: string = await userService.create(req);
-  //     const response = responseSuccess(
-  //       result,
-  //       "Get all users successfully",
-  //       "user"
-  //     );
-  //     res.status(response.statusCode).json(response);
-  //   } catch (err) {
-  //     next(err);
-  //   }
-  // },
-
   findAll: async function (req: Request, res: Response, next: NextFunction) {
     try {
       const result = await userService.findAll(req);

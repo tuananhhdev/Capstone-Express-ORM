@@ -14,7 +14,7 @@ const colorLevel = (level: TLogLevel): string => {
 const consoleFormat = winston.format.combine(
   winston.format.timestamp({ format: "YYYY-MM-DD HH:mm:ss" }),
   winston.format.printf(({ level, message, timestamp, tag }) => {
-   const levelUppercase = level.toUpperCase();
+    const levelUppercase = level.toUpperCase();
     const coloredLevel = colorLevel(levelUppercase as TLogLevel);
     const tagLabel = tag ? chalk.cyanBright(`[${tag}]`) : "";
     return `${chalk.magenta(

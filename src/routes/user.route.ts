@@ -4,6 +4,6 @@ import protect from "../common/middlewares/protect.middleware";
 
 const userRoute = express.Router();
 
-userRoute.get("/", protect, userController.findAll);
+userRoute.get("/", protect ,userController.findAll);
 
 export default userRoute;
