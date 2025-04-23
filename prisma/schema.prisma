@@ -12,29 +12,29 @@ model Images {
   image_name String?   @db.VarChar(255)
   image_url  String?   @db.VarChar(255)
   image_desc String?   @db.Text
+  user_id    Int?
   deletedBy  Int?      @default(0)
   isDeleted  Boolean   @default(false)
   deletedAt  DateTime? @db.Timestamp(0)
   createdAt  DateTime  @default(now()) @db.Timestamp(0)
   updatedAt  DateTime  @default(now()) @db.Timestamp(0)
-  Users      Users[]
+  Users      Users?    @relation(fields: [user_id], references: [user_id], onDelete: NoAction, onUpdate: NoAction, map: "Images_ibfk_1")
+
+  @@index([user_id], map: "user_id")
 }
 
 model Users {
   user_id   Int       @id @default(autoincrement())
-  email     String?   @db.VarChar(100)
-  password  String?   @db.VarChar(255)
   full_name String?   @db.VarChar(255)
+  email     String?   @unique(map: "email") @db.VarChar(100)
+  password  String?   @db.VarChar(255)
   age       Int?
   avatar    String?   @db.VarChar(255)
-  image_id  Int
   google_id String?   @unique(map: "google_id") @db.VarChar(255)
   deletedBy Int       @default(0)
   isDeleted Boolean   @default(false)
   deletedAt DateTime? @db.Timestamp(0)
   createdAt DateTime  @default(now()) @db.Timestamp(0)
   updatedAt DateTime  @default(now()) @db.Timestamp(0)
-  Images    Images    @relation(fields: [image_id], references: [image_id], onDelete: NoAction, onUpdate: NoAction, map: "Users_ibfk_1")
-
-  @@index([image_id], map: "image_id")
+  Images    Images[]
 }

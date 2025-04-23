@@ -1,19 +1,16 @@
 {
   "compilerOptions": {
     "target": "ES2020",
-    "module": "NodeNext",
-    "moduleResolution": "NodeNext",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
     "outDir": "./dist",
     "rootDir": "./src",
     "esModuleInterop": true,
+    "resolveJsonModule": true,
     "strict": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
-    "typeRoots": ["./node_modules/@types", "./common/types"],
-    "baseUrl": ".",
-    "paths": {
-      "*": ["src/*"]
-    }
+    "typeRoots": ["./node_modules/@types", "./common/types"]
   },
   "include": ["src/**/*"],
   "exclude": ["node_modules", "dist"]

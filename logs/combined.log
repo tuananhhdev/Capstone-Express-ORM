@@ -1,0 +1,25 @@
+{"level":"info","message":"⚡️[server]: Server is running at http://localhost:5000","tag":"SYSTEM"}
+{"level":"info","message":"⚡️[server]: Server is running at http://localhost:5000","tag":"SYSTEM"}
+{"level":"info","message":"⚡️[server]: Server is running at http://localhost:5000","tag":"SYSTEM"}
+{"level":"info","message":"Server is running at http://localhost:5000","tag":"SYSTEM"}
+{"level":"info","message":"Server is running at http://localhost:5000","tag":"SERVER"}
+{"level":"info","message":"Server is running at http://localhost:5000","tag":"SERVER"}
+{"level":"info","message":"GET /api/users 401 1356 0 ms","tag":"API"}
+{"level":"info","message":"Server is running at http://localhost:5000","tag":"SERVER"}
+{"level":"info","message":"Server is running at http://localhost:5000","tag":"SERVER"}
+{"level":"info","message":"Server is running at http://localhost:5000","tag":"SERVER"}
+{"level":"info","message":"Server is running at http://localhost:5000","tag":"SERVER"}
+{"level":"info","message":"Server is running at http://localhost:5000","tag":"SERVER"}
+{"level":"info","message":"Server is running at http://localhost:5000","tag":"SERVER"}
+{"level":"info","message":"Server is running at http://localhost:5000","tag":"SERVER"}
+{"level":"info","message":"Server is running at http://localhost:5000","tag":"SERVER"}
+{"level":"info","message":"Server is running at http://localhost:5000","tag":"SERVER"}
+{"level":"info","message":"Server is running at http://localhost:5000","tag":"SERVER"}
+{"level":"info","message":"Server is running at http://localhost:5000","tag":"SERVER"}
+{"level":"info","message":"Server is running at http://localhost:5000","tag":"SERVER"}
+{"level":"info","message":"Server is running at http://localhost:5000","tag":"SERVER"}
+{"level":"info","message":"POST /api/auth 500 1680 0 ms","tag":"API"}
+{"level":"info","message":"Server is running at http://localhost:5000","tag":"SERVER"}
+{"level":"info","message":"POST /api/auth 500 1680 0 ms","tag":"API"}
+{"level":"info","message":"Server is running at http://localhost:5000","tag":"SERVER"}
+{"level":"info","message":"POST / 201 373 0 ms","tag":"API"}

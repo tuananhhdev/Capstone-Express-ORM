@@ -3,6 +3,8 @@ import cors from "cors";
 import { PORT } from "./common/constant/settings.constant";
 import rootRoute from "./routes/root.route";
 import { handleError } from "./common/helpers/error.helper";
+import logApi from "./common/logging/morgan.helper";
+import logger from "./common/logging/logger.helper";
 
 const app: Express = express();
 
@@ -13,9 +15,13 @@ app.use(
   })
 );
 app.use(express.urlencoded({ extended: true }));
+app.use(logApi);
 
 app.use(rootRoute);
-app.use(handleError);
+app.use(handleError)
+
 app.listen(PORT, () =>
-  console.log(`⚡️[server]: Server is running at http://localhost:${PORT}`)
+  logger.info(`Server is running at http://localhost:${PORT}`, {
+    tag: "SERVER",
+  })
 );
